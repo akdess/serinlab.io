@@ -6,21 +6,39 @@
     <title>Lab Members | Serin Lab</title>
     <meta
       name="description"
-      content="Meet the Serin Lab team at Baylor College of Medicine."
+      content="Meet the Serin Lab team at Baylor College of Medicine, spanning principal investigator, postdoctoral, and graduate training roles."
     />
+    <meta name="theme-color" content="#2b59c3" />
+    <meta property="og:title" content="Lab Members | Serin Lab" />
+    <meta
+      property="og:description"
+      content="Meet the investigators and trainees in the Serin Lab."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serinlab.org/members.html" />
+    <meta property="og:site_name" content="Serin Lab" />
+    <link rel="canonical" href="https://serinlab.org/members.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="brand">
+        <a class="brand brand-link" href="index.html" aria-label="Serin Lab home">
           <div class="brand-mark" aria-hidden="true">SL</div>
           <div>
             <p class="brand-title">Serin Lab</p>
             <p class="brand-subtitle">Baylor College of Medicine · Neurosurgery</p>
           </div>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="siteNav"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -28,7 +46,6 @@
         <nav class="nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
-          <a href="tools.html">Tools</a>
           <a href="members.html">Lab Members</a>
           <a href="publications.html">Publications</a>
           <a href="contact.html">Contact</a>
@@ -36,27 +53,47 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section alt">
         <div class="container">
           <div class="section-header">
-            <h2>Lab Members</h2>
-            <p>Introduce your team here. Replace the placeholders with real names.</p>
+            <h1>Lab Members</h1>
+            <p>
+              Our lab brings together computational and translational researchers
+              working at the intersection of brain tumor biology, genomics, and
+              therapeutic discovery.
+            </p>
           </div>
           <div class="member-grid">
             <div class="member-card">
-              <h3>Principal Investigator</h3>
-              <p>Serin Harmanci, PhD</p>
+              <h2>Serin Harmanci, PhD</h2>
+              <p class="member-role">Principal Investigator</p>
+              <p>
+                Leads the lab’s efforts in computational cancer biology, integrative
+                genomics, and method development for brain tumor research.
+              </p>
             </div>
             <div class="member-card">
-              <h3>Postdoctoral Fellows</h3>
-              <p>Su Wang</p>
+              <h2>Su Wang</h2>
+              <p class="member-role">Postdoctoral Fellow</p>
+              <p>
+                Advances translational and computational studies of tumor
+                microenvironments, lineage programs, and therapeutic response.
+              </p>
             </div>
             <div class="member-card">
-              <h3>Graduate Students</h3>
-              <p>William Kobos (PhD student)</p>
+              <h2>William Kobos</h2>
+              <p class="member-role">PhD Student</p>
+              <p>
+                Develops computational approaches for studying tumor heterogeneity
+                and patient-specific molecular signatures.
+              </p>
             </div>
           </div>
+          <p class="note strong">
+            Interested in joining the lab? We welcome inquiries from trainees and
+            collaborators in computational biology, machine learning, and systems neuroscience.
+          </p>
         </div>
       </section>
     </main>

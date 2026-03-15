@@ -6,21 +6,39 @@
     <title>Serin Lab | Baylor College of Medicine</title>
     <meta
       name="description"
-      content="Serin Lab at Baylor College of Medicine. We develop integrative single-cell methods to study brain tumors."
+      content="Serin Lab at Baylor College of Medicine develops integrative single-cell and computational methods to study brain tumors and therapeutic response."
     />
+    <meta name="theme-color" content="#2b59c3" />
+    <meta property="og:title" content="Serin Lab | Baylor College of Medicine" />
+    <meta
+      property="og:description"
+      content="Integrative single-cell and computational methods for brain tumor biology, tumor ecosystems, and therapeutic discovery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serinlab.org/" />
+    <meta property="og:site_name" content="Serin Lab" />
+    <link rel="canonical" href="https://serinlab.org/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="brand">
+        <a class="brand brand-link" href="index.html" aria-label="Serin Lab home">
           <div class="brand-mark" aria-hidden="true">SL</div>
           <div>
             <p class="brand-title">Serin Lab</p>
             <p class="brand-subtitle">Baylor College of Medicine · Neurosurgery</p>
           </div>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="siteNav"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -28,7 +46,6 @@
         <nav class="nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
-          <a href="tools.html">Tools</a>
           <a href="members.html">Lab Members</a>
           <a href="publications.html">Publications</a>
           <a href="contact.html">Contact</a>
@@ -36,32 +53,33 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">Integrative genomics for brain tumors</p>
-            <h1>Single-cell methods for brain tumor biology and therapy.</h1>
+            <h1>Single-cell computational methods for brain tumor biology and therapy.</h1>
             <p class="lead">
-              We develop computational methods to decode tumor heterogeneity and
-              translate patient-specific molecular signatures into actionable therapies.
+              We build integrative computational tools to decode tumor heterogeneity,
+              resolve the tumor microenvironment, and translate patient-specific
+              molecular signatures into actionable therapeutic hypotheses.
             </p>
             <div class="cta-row">
-              <a class="button primary" href="contact.html">Contact</a>
-              <a class="button ghost" href="publications.html">View Publications</a>
+              <a class="button primary" href="contact.html">Contact the Lab</a>
+              <a class="button ghost" href="publications.html">Browse Publications</a>
             </div>
             <div class="hero-stats">
               <div>
-                <p class="stat-number">scRNA-seq</p>
-                <p class="stat-label">Single-cell transcriptomics</p>
+                <p class="stat-number">Single-cell profiling</p>
+                <p class="stat-label">Transcriptomic and integrative analysis across tumor states</p>
               </div>
               <div>
-                <p class="stat-number">Brain tumors</p>
-                <p class="stat-label">Tumor microenvironment profiling</p>
+                <p class="stat-number">Tumor ecosystems</p>
+                <p class="stat-label">Immune, neuron, and tumor cell interactions in context</p>
               </div>
               <div>
-                <p class="stat-number">ML</p>
-                <p class="stat-label">Predictive modeling</p>
+                <p class="stat-number">Therapeutic translation</p>
+                <p class="stat-label">Patient-specific target discovery and predictive modeling</p>
               </div>
             </div>
           </div>
@@ -74,7 +92,7 @@
               <li>Integrative analysis across modalities</li>
             </ul>
             <div class="hero-card-footer">
-              <p>We are always looking for motivated trainees and collaborators.</p>
+              <p>We welcome collaborators and trainees across computational biology, oncology, and neuroscience.</p>
               <a class="text-link" href="contact.html">Get in touch →</a>
             </div>
           </div>
@@ -85,26 +103,30 @@
         <div class="container">
           <div class="section-header">
             <h2>Explore the lab</h2>
+            <p>
+              Learn about the questions we study, the tools we are building, and the
+              people driving the work forward.
+            </p>
           </div>
           <div class="card-grid">
             <article class="card">
               <h3>Research</h3>
-              <p>Learn about our research.</p>
+              <p>Explore the biological questions, disease contexts, and computational strategies shaping our work.</p>
               <a class="text-link" href="research.html">Explore research →</a>
             </article>
             <article class="card">
-              <h3>Tools</h3>
-              <p>Discover computational methods and software from the lab.</p>
-              <a class="text-link" href="tools.html">See tools →</a>
+              <h3>Contact</h3>
+              <p>Connect with the lab about collaborations, trainee opportunities, or research inquiries.</p>
+              <a class="text-link" href="contact.html">Contact the lab →</a>
             </article>
             <article class="card">
               <h3>Lab members</h3>
-              <p>Meet the team and collaborators driving our work.</p>
+              <p>Meet the investigators and trainees building the lab’s research program.</p>
               <a class="text-link" href="members.html">Meet the team →</a>
             </article>
             <article class="card">
               <h3>Publications</h3>
-              <p>Browse selected and recent publications.</p>
+              <p>Read selected publications and follow the evolution of the lab’s methods and discoveries.</p>
               <a class="text-link" href="publications.html">View publications →</a>
             </article>
           </div>

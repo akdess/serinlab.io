@@ -6,21 +6,39 @@
     <title>Contact | Serin Lab</title>
     <meta
       name="description"
-      content="Contact the Serin Lab at Baylor College of Medicine."
+      content="Contact the Serin Lab at Baylor College of Medicine for collaborations, recruitment, and research inquiries."
     />
+    <meta name="theme-color" content="#2b59c3" />
+    <meta property="og:title" content="Contact | Serin Lab" />
+    <meta
+      property="og:description"
+      content="Reach out to the Serin Lab for collaborations, data requests, and trainee inquiries."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serinlab.org/contact.html" />
+    <meta property="og:site_name" content="Serin Lab" />
+    <link rel="canonical" href="https://serinlab.org/contact.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="brand">
+        <a class="brand brand-link" href="index.html" aria-label="Serin Lab home">
           <div class="brand-mark" aria-hidden="true">SL</div>
           <div>
             <p class="brand-title">Serin Lab</p>
             <p class="brand-subtitle">Baylor College of Medicine · Neurosurgery</p>
           </div>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="siteNav"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -28,7 +46,6 @@
         <nav class="nav" id="siteNav">
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
-          <a href="tools.html">Tools</a>
           <a href="members.html">Lab Members</a>
           <a href="publications.html">Publications</a>
           <a href="contact.html">Contact</a>
@@ -36,25 +53,31 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="section alt">
         <div class="container contact-grid">
           <div>
-            <h2>Contact</h2>
+            <h1>Contact</h1>
             <p>
               For collaborations, recruitment, or data requests, please reach out.
             </p>
             <div class="contact-card">
-              <p><strong>Email:</strong> akdes.serinharmanci [at] bcm.edu</p>
-              <p><strong>Department:</strong> Neurosurgery</p>
-              <p><strong>Institution:</strong> Baylor College of Medicine</p>
+              <ul class="contact-list">
+                <li>
+                  <strong>Email:</strong>
+                  <a href="mailto:akdes.serinharmanci@bcm.edu">akdes.serinharmanci@bcm.edu</a>
+                </li>
+                <li><strong>Department:</strong> Neurosurgery</li>
+                <li><strong>Institution:</strong> Baylor College of Medicine</li>
+              </ul>
             </div>
           </div>
           <div class="contact-card alt">
             <h3>Join the lab</h3>
             <p>
-              We welcome applicants with backgrounds in computational biology,
-              machine learning, and systems neuroscience.
+              We welcome inquiries from prospective trainees and collaborators
+              interested in computational biology, machine learning, cancer
+              genomics, and brain tumor research.
             </p>
             <a class="button primary" href="mailto:akdes.serinharmanci@bcm.edu">
               Email the PI
