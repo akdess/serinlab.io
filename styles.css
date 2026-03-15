@@ -109,6 +109,12 @@ img {
   font-size: 0;
 }
 
+.home-page .brand-mark {
+  width: 60px;
+  height: 60px;
+  background-size: 36px 36px;
+}
+
 .brand-title {
   font-weight: 700;
   margin: 0;
