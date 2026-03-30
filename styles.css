@@ -275,18 +275,113 @@ img {
 }
 
 .hero-card {
+  position: relative;
   background: var(--surface);
   border-radius: 24px;
   padding: 2rem;
   box-shadow: var(--shadow);
 }
 
+.hero-card-animated {
+  overflow: hidden;
+  transform-style: preserve-3d;
+  background:
+    radial-gradient(circle at top right, rgba(84, 211, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+.hero-visual-wrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(68, 197, 255, 0.24), rgba(43, 89, 195, 0.08) 50%, transparent 72%),
+    linear-gradient(135deg, rgba(19, 33, 61, 0.06), rgba(43, 89, 195, 0.12));
+  animation: heroGlow 7s ease-in-out infinite, heroFloat 8s ease-in-out infinite;
+}
+
+.hero-visual-backdrop,
+.hero-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-visual-backdrop {
+  z-index: 0;
+  background:
+    linear-gradient(135deg, rgba(7, 16, 38, 0.18), rgba(43, 89, 195, 0.08)),
+    url("images/ai/brain-tumor-hero.png") center/cover no-repeat;
+  transform: scale(1.12);
+  filter: blur(10px) saturate(1.08);
+  opacity: 0.7;
+  animation: heroBackdropPan 18s ease-in-out infinite alternate;
+}
+
+.hero-scanline {
+  z-index: 3;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(139, 237, 255, 0.08) 46%, rgba(255, 255, 255, 0.32) 50%, rgba(139, 237, 255, 0.08) 54%, transparent 100%);
+  mix-blend-mode: screen;
+  animation: heroScan 6.5s ease-in-out infinite;
+}
+
 .hero-visual {
+  position: relative;
+  z-index: 2;
   width: 100%;
   border-radius: 18px;
-  margin-bottom: 1.25rem;
   border: 1px solid rgba(43, 89, 195, 0.14);
   box-shadow: 0 18px 34px rgba(20, 33, 61, 0.14);
+  transform-origin: center center;
+  animation: heroImagePan 16s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-orbit,
+.hero-pulse {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-orbit {
+  border: 1px solid rgba(112, 220, 255, 0.28);
+  border-radius: 999px;
+}
+
+.hero-orbit-one {
+  inset: 8% 6%;
+  animation: orbitSpin 18s linear infinite;
+}
+
+.hero-orbit-two {
+  inset: 18% 16%;
+  border-color: rgba(156, 122, 255, 0.2);
+  animation: orbitSpinReverse 24s linear infinite;
+}
+
+.hero-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(132, 231, 255, 0.9), rgba(132, 231, 255, 0));
+  box-shadow: 0 0 20px rgba(132, 231, 255, 0.55);
+}
+
+.hero-pulse-one {
+  top: 16%;
+  right: 14%;
+  animation: pulseDrift 6s ease-in-out infinite;
+}
+
+.hero-pulse-two {
+  left: 12%;
+  bottom: 14%;
+  background: radial-gradient(circle, rgba(170, 133, 255, 0.85), rgba(170, 133, 255, 0));
+  box-shadow: 0 0 20px rgba(170, 133, 255, 0.45);
+  animation: pulseDrift 7.5s ease-in-out infinite reverse;
 }
 
 .hero-card h2 {
@@ -306,6 +401,103 @@ img {
 .hero-card-footer {
   border-top: 1px solid var(--border);
   padding-top: 1.2rem;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0) scale(1.01);
+  }
+}
+
+@keyframes heroImagePan {
+  0% {
+    transform: translate3d(-1.5%, 0, 0) scale(1.02);
+  }
+
+  100% {
+    transform: translate3d(1.5%, -1.2%, 0) scale(1.06);
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+      0 18px 34px rgba(20, 33, 61, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      inset 0 0 0 1px rgba(145, 223, 255, 0.18),
+      0 24px 42px rgba(43, 89, 195, 0.16);
+  }
+}
+
+@keyframes heroBackdropPan {
+  0% {
+    transform: scale(1.12) translate3d(-1.2%, -0.8%, 0);
+  }
+
+  100% {
+    transform: scale(1.18) translate3d(1.2%, 0.8%, 0);
+  }
+}
+
+@keyframes heroScan {
+  0%,
+  100% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+
+  12%,
+  78% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(120%);
+    opacity: 0.9;
+  }
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulseDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translate3d(10px, -12px, 0) scale(1.2);
+    opacity: 1;
+  }
 }
 
 .text-link {

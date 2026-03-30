@@ -47,3 +47,24 @@ const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+const heroCard = document.querySelector("[data-hero-card]");
+
+if (heroCard && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const updateHeroCard = (event) => {
+    const rect = heroCard.getBoundingClientRect();
+    const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+    const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+    const rotateY = offsetX * 8;
+    const rotateX = offsetY * -8;
+
+    heroCard.style.transform =
+      `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  };
+
+  heroCard.addEventListener("pointermove", updateHeroCard);
+
+  heroCard.addEventListener("pointerleave", () => {
+    heroCard.style.transform = "";
+  });
+}
